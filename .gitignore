@@ -1,0 +1,5 @@
+# Ignora node_modules en cualquier parte del proyecto
+node_modules/
+
+# Ignora archivos de entorno
+.env

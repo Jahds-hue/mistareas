@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* === RESET GENERAL === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #07000d;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  color: white;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+/* === CONTAINER GENERAL === */
+.container,
+.form-container,
+.todo-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+
+/* === TITULOS === */
+.title,
+.form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* === FORMULARIOS === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__input,
+.form-container input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.form__button,
+.form-container button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(113, 0, 212, 0.7);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__button:hover,
+.form-container button:hover {
+  background-color: rgba(95, 0, 179, 0.5);
+}
+
+
+/* === ENLACES Y MENSAJES === */
+.form-container p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.form-container a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.error {
+  color: #f87171;
+  margin-top: 1rem;
+}
+
+.success {
+  color: #4ade80;
+  margin-top: 1rem;
+}
+
+
+/* === TAREAS === */
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.todo__status,
+.todo__delete {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo__status:hover,
+.todo__delete:hover {
+  transform: scale(1.2);
+}
+
+
+/* === FORMULARIO DE NUEVA TAREA === */
+.form {
+  margin-bottom: 2rem;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 420px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .todo {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .form__input,
+  .form__button,
+  .form-container input,
+  .form-container button {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
